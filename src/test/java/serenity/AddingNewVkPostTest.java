@@ -7,7 +7,6 @@ import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.ManagedPages;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.annotations.Story;
-import net.thucydides.core.annotations.WithDriver;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.junit.annotations.Concurrent;
 import serenity.PropertiesReader;
@@ -32,11 +31,8 @@ public class AddingNewVkPostTest {
 	public Pages pages;
 
     @Steps
-    public VkUserSteps steps;
-    
-    @WithDriver("iexplorer")
-    //@WithDriver("chrome")
-    //@WithDriver("firefox")
+    public VkUserSteps steps;    
+
     @Test
     public void testing_ability_adding_vk_post() {
         steps.openVkHomePage();
